@@ -15,7 +15,7 @@ public class Main {
 
         int maior = n1;
         int menor = n1;
-        int media = (n1 + n2 + n3) / 3;
+        int media = n3;
 
         if (n2 > maior){
             maior = n2;
@@ -29,6 +29,28 @@ public class Main {
         }
         if (n3 < menor) {
             menor = n3;
+        }
+
+        if (n2 < n1){
+            if (n1 < n3){
+                media = n1;
+            }
+        }
+        if (n3 < n1){
+            if (n1 < n2){
+                media = n1;
+            }
+        }
+
+        if (n1 < n2){
+            if (n2 < n3){
+                media = n2;
+            }
+        }
+        if (n3 < n2){
+            if (n2 < n1){
+                media = n2;
+            }
         }
 
         System.out.printf("Maior: %d\n", maior);
