@@ -1,0 +1,9 @@
+1) Qual a diferença entre um loop for e um loop while.
+R: O loop for têm as iterações contadas desde sua inicialização, diferente do while que fica repetindo até que uma condição seja falsa. 
+O for é preferencial quando já se sabe quantas vezes irá se repetir, o while é para quando não se sabe ao certo isto.
+
+2) Para que serve uma estrutura condicional if/else?
+R: As estruturas condicionais servem para direcionar o sistema, fazendo com que diferentes coisas aconteçam se uma condição for verdadeira ou falsa.
+
+3) O que é uma variável e por que ela é importante?
+R: Uma variável é uma "caixa" que guarda valores/dados, ela serve para manipular informações ao decorrer da execução do sistema, o que é a base da computação.
