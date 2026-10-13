@@ -1,9 +1,16 @@
 package threeWeek.Desafio;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
     private double saldo;
     private String numero;
     private String agencia;
+    private Cliente titular;
+
+    public ContaBancaria(Cliente titular, String agencia, String numero) {
+        this.titular = titular;
+        this.agencia = agencia;
+        this.numero = numero;
+    }
 
     public double getSaldo() {
         return saldo;
