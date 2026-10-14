@@ -10,6 +10,25 @@ public abstract class ContaBancaria {
         this.titular = titular;
         this.agencia = agencia;
         this.numero = numero;
+        this.saldo = 0;
+    }
+
+    public boolean sacar(double valor){
+        if (valor <= this.saldo && valor >= 1){
+            this.saldo -= valor;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean deposito(double valor){
+        if (valor >= 1) {
+            this.saldo += valor;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public double getSaldo() {
@@ -23,4 +42,10 @@ public abstract class ContaBancaria {
     public String getAgencia() {
         return agencia;
     }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+
+
 }
