@@ -1,7 +1,6 @@
 package threeWeek.Desafio;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Transacao {
     private String tipo;
@@ -21,6 +20,30 @@ public class Transacao {
         this.valor = valor;
         this.conta = conta;
         this.data = LocalDate.now();
+
+        if (this.tipo.equalsIgnoreCase("depósito")){
+            realizarDeposito(this.valor);
+        } else {
+            realizarSaque(this.valor);
+        }
+    }
+
+    public void realizarDeposito(double valor){
+        boolean sucesso = conta.deposito(valor);
+        if (sucesso){
+            System.out.println("Depósito realizada com sucesso!");
+        } else {
+            System.out.println("Não foi possível realizar o depósito.");
+        }
+    }
+
+    public void realizarSaque(double valor){
+        boolean sucesso = conta.sacar(valor);
+        if (sucesso){
+            System.out.println("Saque realizado com sucesso!");
+        } else {
+            System.out.println("Não foi possível realizar o saque.");
+        }
     }
 
     public String getTipo() {
